@@ -145,8 +145,6 @@ impl Client {
             .response
             .context("No `response` field")?;
 
-        println!("{resp:#?}");
-
         if resp.result.code == 100 {
             Ok(resp.result.msg)
         } else {
